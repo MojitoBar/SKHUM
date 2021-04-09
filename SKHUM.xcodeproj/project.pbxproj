@@ -8,18 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		B746299A2620D69D00DD071E /* SKHUMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74629992620D69D00DD071E /* SKHUMApp.swift */; };
-		B746299C2620D69D00DD071E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B746299B2620D69D00DD071E /* ContentView.swift */; };
 		B746299E2620D69E00DD071E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B746299D2620D69E00DD071E /* Assets.xcassets */; };
 		B74629A12620D69E00DD071E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B74629A02620D69E00DD071E /* Preview Assets.xcassets */; };
+		B74629B22620DB6C00DD071E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74629B12620DB6C00DD071E /* ContentView.swift */; };
+		B74629B92620DBC000DD071E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74629B82620DBC000DD071E /* LoginView.swift */; };
+		B74629BD2620DE4100DD071E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74629BC2620DE4100DD071E /* User.swift */; };
+		B74629C22620DF1A00DD071E /* PostLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74629C12620DF1A00DD071E /* PostLogin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B74629962620D69D00DD071E /* SKHUM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKHUM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B74629992620D69D00DD071E /* SKHUMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKHUMApp.swift; sourceTree = "<group>"; };
-		B746299B2620D69D00DD071E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B746299D2620D69E00DD071E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B74629A02620D69E00DD071E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B74629A22620D69E00DD071E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B74629B12620DB6C00DD071E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B74629B82620DBC000DD071E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		B74629BC2620DE4100DD071E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B74629C12620DF1A00DD071E /* PostLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLogin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +58,11 @@
 		B74629982620D69D00DD071E /* SKHUM */ = {
 			isa = PBXGroup;
 			children = (
+				B74629C02620DEF800DD071E /* Controller */,
+				B74629BB2620DE3200DD071E /* Model */,
+				B74629B42620DB8A00DD071E /* View */,
 				B74629992620D69D00DD071E /* SKHUMApp.swift */,
-				B746299B2620D69D00DD071E /* ContentView.swift */,
+				B74629B12620DB6C00DD071E /* ContentView.swift */,
 				B746299D2620D69E00DD071E /* Assets.xcassets */,
 				B74629A22620D69E00DD071E /* Info.plist */,
 				B746299F2620D69E00DD071E /* Preview Content */,
@@ -67,6 +76,30 @@
 				B74629A02620D69E00DD071E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B74629B42620DB8A00DD071E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B74629B82620DBC000DD071E /* LoginView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B74629BB2620DE3200DD071E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B74629C12620DF1A00DD071E /* PostLogin.swift */,
+				B74629BC2620DE4100DD071E /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B74629C02620DEF800DD071E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +171,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B746299C2620D69D00DD071E /* ContentView.swift in Sources */,
+				B74629BD2620DE4100DD071E /* User.swift in Sources */,
+				B74629B92620DBC000DD071E /* LoginView.swift in Sources */,
 				B746299A2620D69D00DD071E /* SKHUMApp.swift in Sources */,
+				B74629C22620DF1A00DD071E /* PostLogin.swift in Sources */,
+				B74629B22620DB6C00DD071E /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
