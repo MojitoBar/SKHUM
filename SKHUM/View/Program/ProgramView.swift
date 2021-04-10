@@ -8,17 +8,13 @@
 import SwiftUI
 
 struct ProgramView: View {
+    @StateObject var viewModel = ProgramCardViewModel()
+    
     var body: some View {
         ScrollView{
-            ProgramCard()
-            ProgramCard()
-            ProgramCard()
-            ProgramCard()
-            ProgramCard()
-            ProgramCard()
-            ProgramCard()
-            ProgramCard()
-            ProgramCard()
+            ForEach(viewModel.getPrograms()){ card in
+                ProgramCard(name: card.name)
+            }
         }
         .padding(20)
         .frame(width: UIScreen.main.bounds.width * 0.9)

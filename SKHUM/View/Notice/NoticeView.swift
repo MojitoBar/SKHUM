@@ -17,7 +17,7 @@ struct NoticeView: View {
             
             Text("공지사항")
             NavigationLink(
-                destination: Text("Destination"),
+                destination: NoticeDescription(),
                 label: {
                     Image(systemName: "plus")
                         .foregroundColor(.black)
