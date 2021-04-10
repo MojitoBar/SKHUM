@@ -10,6 +10,7 @@ import SwiftUI
 struct LoginView: View {
     @State var userId = ""
     @State var password = ""
+    
     var body: some View {
         VStack{
             Text("SKHUM")
