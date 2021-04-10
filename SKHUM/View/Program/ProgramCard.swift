@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct ProgramCard: View {
+    @State var name: String
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 20)
                 .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
             VStack(alignment: .leading){
                 HStack{
-                    Text("2021-1 한솥밥")
+                    Text(name)
                         .font(.title)
                     Spacer()
                     Text("M80")
@@ -34,6 +35,6 @@ struct ProgramCard: View {
 
 struct ProgramCard_Previews: PreviewProvider {
     static var previews: some View {
-        ProgramCard()
+        ProgramView()
     }
 }

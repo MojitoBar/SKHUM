@@ -19,6 +19,9 @@
 		B74629E8262187C500DD071E /* NoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74629E7262187C500DD071E /* NoticeView.swift */; };
 		B74629F22621958900DD071E /* ProgramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74629F12621958900DD071E /* ProgramView.swift */; };
 		B74629F62621965300DD071E /* ProgramCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74629F52621965300DD071E /* ProgramCard.swift */; };
+		B74629F92621D31800DD071E /* ProgramCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74629F82621D31800DD071E /* ProgramCardViewModel.swift */; };
+		B74629FD2621D37600DD071E /* ProgramModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74629FC2621D37600DD071E /* ProgramModel.swift */; };
+		B7462A012621DCA400DD071E /* NoticeDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7462A002621DCA400DD071E /* NoticeDescription.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		B74629E7262187C500DD071E /* NoticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeView.swift; sourceTree = "<group>"; };
 		B74629F12621958900DD071E /* ProgramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramView.swift; sourceTree = "<group>"; };
 		B74629F52621965300DD071E /* ProgramCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramCard.swift; sourceTree = "<group>"; };
+		B74629F82621D31800DD071E /* ProgramCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramCardViewModel.swift; sourceTree = "<group>"; };
+		B74629FC2621D37600DD071E /* ProgramModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramModel.swift; sourceTree = "<group>"; };
+		B7462A002621DCA400DD071E /* NoticeDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDescription.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +74,7 @@
 		B74629982620D69D00DD071E /* SKHUM */ = {
 			isa = PBXGroup;
 			children = (
-				B74629C02620DEF800DD071E /* Controller */,
+				B74629C02620DEF800DD071E /* ViewModel */,
 				B74629BB2620DE3200DD071E /* Model */,
 				B74629B42620DB8A00DD071E /* View */,
 				B74629992620D69D00DD071E /* SKHUMApp.swift */,
@@ -104,16 +110,18 @@
 		B74629BB2620DE3200DD071E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B74629C12620DF1A00DD071E /* PostLogin.swift */,
+				B74629FC2621D37600DD071E /* ProgramModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		B74629C02620DEF800DD071E /* Controller */ = {
+		B74629C02620DEF800DD071E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B74629F82621D31800DD071E /* ProgramCardViewModel.swift */,
+				B74629C12620DF1A00DD071E /* PostLogin.swift */,
 			);
-			path = Controller;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		B74629D126217AC700DD071E /* Main */ = {
@@ -136,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				B74629E7262187C500DD071E /* NoticeView.swift */,
+				B7462A002621DCA400DD071E /* NoticeDescription.swift */,
 			);
 			path = Notice;
 			sourceTree = "<group>";
@@ -218,7 +227,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B74629F92621D31800DD071E /* ProgramCardViewModel.swift in Sources */,
 				B74629F62621965300DD071E /* ProgramCard.swift in Sources */,
+				B74629FD2621D37600DD071E /* ProgramModel.swift in Sources */,
 				B74629C72621734300DD071E /* MainView.swift in Sources */,
 				B74629B92620DBC000DD071E /* LoginView.swift in Sources */,
 				B74629CA262173C500DD071E /* NavbarView.swift in Sources */,
@@ -226,6 +237,7 @@
 				B74629E2262182F400DD071E /* StateView.swift in Sources */,
 				B74629C22620DF1A00DD071E /* PostLogin.swift in Sources */,
 				B74629E8262187C500DD071E /* NoticeView.swift in Sources */,
+				B7462A012621DCA400DD071E /* NoticeDescription.swift in Sources */,
 				B74629B22620DB6C00DD071E /* ContentView.swift in Sources */,
 				B74629F22621958900DD071E /* ProgramView.swift in Sources */,
 			);
