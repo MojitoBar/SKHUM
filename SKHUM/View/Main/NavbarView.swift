@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct NavbarView: View {
-    @State var menuOpen: Bool = false
+    @Binding var menuOpen: Bool
     var body: some View {
         ZStack{
             Spacer()
             Text("SKHUM")
                 .font(.system(size: 30))
-            Button(action: {}, label: {
+            Button(action: {
+                menuOpen = true
+            }, label: {
                 Image(systemName: "list.dash")
                     .resizable()
                     .frame(width: 20, height: 15)
