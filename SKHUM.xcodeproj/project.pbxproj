@@ -22,6 +22,8 @@
 		B74629F92621D31800DD071E /* ProgramCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74629F82621D31800DD071E /* ProgramCardViewModel.swift */; };
 		B74629FD2621D37600DD071E /* ProgramModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74629FC2621D37600DD071E /* ProgramModel.swift */; };
 		B7462A012621DCA400DD071E /* NoticeDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7462A002621DCA400DD071E /* NoticeDescription.swift */; };
+		B7462A042621ECF700DD071E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7462A032621ECF700DD071E /* LoginViewModel.swift */; };
+		B7462A072621ED6400DD071E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7462A062621ED6400DD071E /* UserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		B74629F82621D31800DD071E /* ProgramCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramCardViewModel.swift; sourceTree = "<group>"; };
 		B74629FC2621D37600DD071E /* ProgramModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramModel.swift; sourceTree = "<group>"; };
 		B7462A002621DCA400DD071E /* NoticeDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDescription.swift; sourceTree = "<group>"; };
+		B7462A032621ECF700DD071E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		B7462A062621ED6400DD071E /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				B74629FC2621D37600DD071E /* ProgramModel.swift */,
+				B7462A062621ED6400DD071E /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -120,6 +125,7 @@
 			children = (
 				B74629F82621D31800DD071E /* ProgramCardViewModel.swift */,
 				B74629C12620DF1A00DD071E /* PostLogin.swift */,
+				B7462A032621ECF700DD071E /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -233,12 +239,14 @@
 				B74629C72621734300DD071E /* MainView.swift in Sources */,
 				B74629B92620DBC000DD071E /* LoginView.swift in Sources */,
 				B74629CA262173C500DD071E /* NavbarView.swift in Sources */,
+				B7462A042621ECF700DD071E /* LoginViewModel.swift in Sources */,
 				B746299A2620D69D00DD071E /* SKHUMApp.swift in Sources */,
 				B74629E2262182F400DD071E /* StateView.swift in Sources */,
 				B74629C22620DF1A00DD071E /* PostLogin.swift in Sources */,
 				B74629E8262187C500DD071E /* NoticeView.swift in Sources */,
 				B7462A012621DCA400DD071E /* NoticeDescription.swift in Sources */,
 				B74629B22620DB6C00DD071E /* ContentView.swift in Sources */,
+				B7462A072621ED6400DD071E /* UserModel.swift in Sources */,
 				B74629F22621958900DD071E /* ProgramView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

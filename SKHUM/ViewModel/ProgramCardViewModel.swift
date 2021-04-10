@@ -20,7 +20,6 @@ class ProgramCardViewModel: ObservableObject{
         URLSession.shared.dataTask(with: url) { (data, resp, err) in
             DispatchQueue.main.async {
                 self.Programs = try! JSONDecoder().decode([Program].self, from: data!)
-                print(self.Programs[0].name)
             }
         }.resume()
     }

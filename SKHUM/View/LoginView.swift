@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
+    @StateObject var viewModel = LoginViewModel()
     @State var userId = ""
     @State var password = ""
     
@@ -36,7 +37,13 @@ struct LoginView: View {
             .frame(width: 250, height: 50, alignment: .center)
             
             Button(action: {
-                postLogin(id: userId, password: password)
+                viewModel.TryLogin(id: userId, name: password) { (err) in
+                    if let err = err{
+                        print("Failed to create post object:", err)
+                        return
+                    }
+                    print("Finished Login")
+                }
             }, label: {
                 Text("Login")
                     .frame(width: 250, height: 50, alignment: .center)
