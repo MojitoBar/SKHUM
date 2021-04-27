@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     @State var sideMenuBarToggle: Bool = false
+    
     var body: some View {
         ZStack{
             NavigationView{
@@ -24,19 +25,11 @@ struct MainView: View {
                     })
                 }
                 .navigationBarHidden(true)
-                // side menubar
-                Rectangle()
-                    .frame(width: 250, alignment: .center)
-                    .offset(x: self.sideMenuBarToggle ? 100 : UIScreen.main.bounds.width, y: 0)
-                    .animation(.default)
-                    .foregroundColor(.gray)
             }
+            
+            SideMenuView(sideMenuBarToggle: $sideMenuBarToggle)
         }
-        .onTapGesture {
-            if sideMenuBarToggle{
-                sideMenuBarToggle = false
-            }
-        }
+        .ignoresSafeArea()
     }
 }
 

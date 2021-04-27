@@ -13,6 +13,7 @@ struct ProgramView: View {
     var body: some View {
         ScrollView{
             ForEach(viewModel.getPrograms()){ card in
+//                ProgramCard(name: card.programName, mileage: card.givingMileage)
                 ProgramCard(name: card.name)
             }
         }

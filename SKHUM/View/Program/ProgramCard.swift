@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProgramCard: View {
     @State var name: String
+//    @State var mileage: Int
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 20)
@@ -18,8 +19,9 @@ struct ProgramCard: View {
                     Text(name)
                         .font(.title)
                     Spacer()
-                    Text("M80")
-                        .font(.title3)
+                    Text("50")
+//                    Text(String(mileage))
+//                        .font(.title3)
                 }
                 
                 Text("모집기간: 21-04-05 ~ 21-04-11")

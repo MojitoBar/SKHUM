@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B71511D62638328300B4DECF /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71511D52638328300B4DECF /* SideMenuView.swift */; };
+		B71511D9263833CA00B4DECF /* MenuButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71511D8263833CA00B4DECF /* MenuButtonView.swift */; };
+		B7164C112624E24A00BB459A /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7164C102624E24A00BB459A /* ViewRouter.swift */; };
 		B746299A2620D69D00DD071E /* SKHUMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74629992620D69D00DD071E /* SKHUMApp.swift */; };
 		B746299E2620D69E00DD071E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B746299D2620D69E00DD071E /* Assets.xcassets */; };
 		B74629A12620D69E00DD071E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B74629A02620D69E00DD071E /* Preview Assets.xcassets */; };
 		B74629B22620DB6C00DD071E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74629B12620DB6C00DD071E /* ContentView.swift */; };
 		B74629B92620DBC000DD071E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74629B82620DBC000DD071E /* LoginView.swift */; };
-		B74629C22620DF1A00DD071E /* PostLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74629C12620DF1A00DD071E /* PostLogin.swift */; };
 		B74629C72621734300DD071E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74629C62621734300DD071E /* MainView.swift */; };
 		B74629CA262173C500DD071E /* NavbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74629C9262173C500DD071E /* NavbarView.swift */; };
 		B74629E2262182F400DD071E /* StateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74629E1262182F400DD071E /* StateView.swift */; };
@@ -24,9 +26,13 @@
 		B7462A012621DCA400DD071E /* NoticeDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7462A002621DCA400DD071E /* NoticeDescription.swift */; };
 		B7462A042621ECF700DD071E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7462A032621ECF700DD071E /* LoginViewModel.swift */; };
 		B7462A072621ED6400DD071E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7462A062621ED6400DD071E /* UserModel.swift */; };
+		B79797CE26233DB600B5F672 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79797CD26233DB600B5F672 /* Singleton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B71511D52638328300B4DECF /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		B71511D8263833CA00B4DECF /* MenuButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtonView.swift; sourceTree = "<group>"; };
+		B7164C102624E24A00BB459A /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		B74629962620D69D00DD071E /* SKHUM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKHUM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B74629992620D69D00DD071E /* SKHUMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKHUMApp.swift; sourceTree = "<group>"; };
 		B746299D2620D69E00DD071E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -34,7 +40,6 @@
 		B74629A22620D69E00DD071E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B74629B12620DB6C00DD071E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B74629B82620DBC000DD071E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		B74629C12620DF1A00DD071E /* PostLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLogin.swift; sourceTree = "<group>"; };
 		B74629C62621734300DD071E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		B74629C9262173C500DD071E /* NavbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavbarView.swift; sourceTree = "<group>"; };
 		B74629E1262182F400DD071E /* StateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateView.swift; sourceTree = "<group>"; };
@@ -46,6 +51,7 @@
 		B7462A002621DCA400DD071E /* NoticeDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDescription.swift; sourceTree = "<group>"; };
 		B7462A032621ECF700DD071E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		B7462A062621ED6400DD071E /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		B79797CD26233DB600B5F672 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,8 +130,9 @@
 			isa = PBXGroup;
 			children = (
 				B74629F82621D31800DD071E /* ProgramCardViewModel.swift */,
-				B74629C12620DF1A00DD071E /* PostLogin.swift */,
+				B79797CD26233DB600B5F672 /* Singleton.swift */,
 				B7462A032621ECF700DD071E /* LoginViewModel.swift */,
+				B7164C102624E24A00BB459A /* ViewRouter.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -134,6 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				B74629C9262173C500DD071E /* NavbarView.swift */,
+				B71511D52638328300B4DECF /* SideMenuView.swift */,
+				B71511D8263833CA00B4DECF /* MenuButtonView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -234,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B74629F92621D31800DD071E /* ProgramCardViewModel.swift in Sources */,
+				B71511D62638328300B4DECF /* SideMenuView.swift in Sources */,
 				B74629F62621965300DD071E /* ProgramCard.swift in Sources */,
 				B74629FD2621D37600DD071E /* ProgramModel.swift in Sources */,
 				B74629C72621734300DD071E /* MainView.swift in Sources */,
@@ -241,11 +251,13 @@
 				B74629CA262173C500DD071E /* NavbarView.swift in Sources */,
 				B7462A042621ECF700DD071E /* LoginViewModel.swift in Sources */,
 				B746299A2620D69D00DD071E /* SKHUMApp.swift in Sources */,
+				B71511D9263833CA00B4DECF /* MenuButtonView.swift in Sources */,
 				B74629E2262182F400DD071E /* StateView.swift in Sources */,
-				B74629C22620DF1A00DD071E /* PostLogin.swift in Sources */,
 				B74629E8262187C500DD071E /* NoticeView.swift in Sources */,
 				B7462A012621DCA400DD071E /* NoticeDescription.swift in Sources */,
 				B74629B22620DB6C00DD071E /* ContentView.swift in Sources */,
+				B7164C112624E24A00BB459A /* ViewRouter.swift in Sources */,
+				B79797CE26233DB600B5F672 /* Singleton.swift in Sources */,
 				B7462A072621ED6400DD071E /* UserModel.swift in Sources */,
 				B74629F22621958900DD071E /* ProgramView.swift in Sources */,
 			);
