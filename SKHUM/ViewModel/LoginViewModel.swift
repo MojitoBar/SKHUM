@@ -8,12 +8,6 @@ import SwiftUI
 
 class LoginViewModel: ObservableObject{
     
-    var LoginUser: User!
-    
-    func setUser(id: String){
-        LoginUser = User.init(id: 1, nick: id, pw: "1234")
-    }
-    
     func TryLogin(id: String, name: String, completion: @escaping (Error?) -> ()){
         guard let url = URL(string: "http://localhost:8080/user/login") else { return }
         
@@ -27,7 +21,7 @@ class LoginViewModel: ObservableObject{
             urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
             
             URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
-                
+                print(String(data: data!, encoding: .utf8)!)
                 guard error == nil else {
                     print("Error: error calling GET")
                     print(error!)
@@ -39,13 +33,14 @@ class LoginViewModel: ObservableObject{
                 }
                 // 로그인에 성공했을 때
                 if let response = response as? HTTPURLResponse, (200 ..< 300) ~= response.statusCode{
-                    self.setUser(id: id)
+                    Singleton.sharedInstance.setUser(id: id)
+                    Singleton.sharedInstance.setIsLogin(islogin: true)
                 } else {
                     print("Error: HTTP request failed")
                     return
                 }
                 completion(nil)
-                print(self.LoginUser.nick)
+                print(Singleton.sharedInstance.getIsLogin())
                 
             }.resume()
         }

@@ -15,7 +15,9 @@ struct NavbarView: View {
             Text("SKHUM")
                 .font(.system(size: 30))
             Button(action: {
-                menuOpen = true
+                withAnimation(.spring()){
+                    menuOpen.toggle()
+                }
             }, label: {
                 Image(systemName: "list.dash")
                     .resizable()
@@ -26,9 +28,6 @@ struct NavbarView: View {
         }
         .background(Color.white)
     }
-}
-extension NavbarView{
-    
 }
 
 struct NavbarView_Previews: PreviewProvider {

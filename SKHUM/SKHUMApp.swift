@@ -11,7 +11,8 @@ import SwiftUI
 struct SKHUMApp: App {
     var body: some Scene {
         WindowGroup {
-            LoginView()
+//            MainView()
+            ContentView(viewRouter: ViewRouter())
         }
     }
 }

@@ -11,6 +11,7 @@ class ProgramCardViewModel: ObservableObject{
         fetchPrograms()
     }
     
+//    let url = "http://localhost:8080/program/all"
     let url = "http://localhost:8080/user/all"
     
     @Published var Programs: [Program] = []

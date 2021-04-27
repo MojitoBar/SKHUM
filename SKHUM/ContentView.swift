@@ -8,13 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var viewRouter: ViewRouter
     var body: some View {
-        LoginView()
+        if viewRouter.currentPage == "Login"{
+            LoginView(viewRouter: viewRouter)
+        }
+        else if viewRouter.currentPage == "Main"{
+            MainView()
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(viewRouter: ViewRouter())
     }
 }

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct LoginView: View {
     @StateObject var viewModel = LoginViewModel()
+    @ObservedObject var viewRouter: ViewRouter
+        
     @State var userId = ""
     @State var password = ""
     
@@ -42,7 +44,7 @@ struct LoginView: View {
                         print("Failed to create post object:", err)
                         return
                     }
-                    print("Finished Login")
+                    viewRouter.currentPage = "Main"
                 }
             }, label: {
                 Text("Login")
@@ -52,8 +54,3 @@ struct LoginView: View {
     }
 }
 
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
-    }
-}
