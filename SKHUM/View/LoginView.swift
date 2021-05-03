@@ -18,25 +18,34 @@ struct LoginView: View {
         VStack{
             Text("SKHUM")
                 .font(.largeTitle)
+                .fontWeight(.light)
                 .foregroundColor(.green)
             
             ZStack{
-                Capsule()
-                    .foregroundColor(.gray)
-                    .opacity(0.3)
+                RoundedRectangle(cornerRadius: 8)
+                    .frame(width: 250, height: 70, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .foregroundColor(.white)
+                    .shadow(color: Color(hue: 1.0, saturation: 0.0, brightness: 0.891), radius: 10, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/)
+                Text("ID")
+                    .padding(.init(top: 0, leading: 0, bottom: 30, trailing: 210))
                 TextField("학번을 입력해 주세요.", text: $userId)
-                    .padding(.leading, 10)
+                    .padding(.init(top: 30, leading: 10, bottom: 0, trailing: 0))
             }
             .frame(width: 250, height: 50, alignment: .center)
+            .padding(.init(top: 50, leading: 0, bottom: 30, trailing: 0))
             
             ZStack{
-                Capsule()
-                    .foregroundColor(.gray)
-                    .opacity(0.3)
+                RoundedRectangle(cornerRadius: 8)
+                    .frame(width: 250, height: 70, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .foregroundColor(.white)
+                    .shadow(color: Color(hue: 1.0, saturation: 0.0, brightness: 0.891), radius: 10, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/)
+                Text("Password")
+                    .padding(.init(top: 0, leading: 0, bottom: 30, trailing: 150))
                 SecureField("비밀번호를 입력해 주세요.", text: $password)
-                    .padding(.leading, 10)
+                    .padding(.init(top: 30, leading: 10, bottom: 0, trailing: 0))
             }
             .frame(width: 250, height: 50, alignment: .center)
+            .padding(.init(top: 0, leading: 0, bottom: 50, trailing: 0))
             
             Button(action: {
                 viewModel.TryLogin(id: userId, name: password) { (err) in
@@ -49,8 +58,16 @@ struct LoginView: View {
             }, label: {
                 Text("Login")
                     .frame(width: 250, height: 50, alignment: .center)
+                    .foregroundColor(.white)
+                    .background(Color.green)
+                    .cornerRadius(8)
             })
         }
     }
 }
 
+struct LoginView_Previews: PreviewProvider {
+    static var previews: some View {
+        LoginView(viewRouter: ViewRouter())
+    }
+}
