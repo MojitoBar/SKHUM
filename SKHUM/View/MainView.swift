@@ -23,6 +23,8 @@ struct MainView: View {
                         // programView
                         ProgramView()
                     })
+                    // 여백을 메꾸기 위함.
+                    .padding(.top, -8)
                 }
                 .navigationBarHidden(true)
             }
