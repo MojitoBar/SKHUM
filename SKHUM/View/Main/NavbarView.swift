@@ -11,22 +11,31 @@ struct NavbarView: View {
     @Binding var menuOpen: Bool
     var body: some View {
         ZStack{
-            Spacer()
-            Text("SKHUM")
-                .font(.system(size: 30))
-            Button(action: {
-                withAnimation(.spring()){
-                    menuOpen.toggle()
-                }
-            }, label: {
-                Image(systemName: "list.dash")
-                    .resizable()
-                    .frame(width: 20, height: 15)
-            })
-            .padding(.leading, UIScreen.main.bounds.width * 0.8)
-            .foregroundColor(.black)
+            Rectangle()
+                .frame(height: 120, alignment: .center)
+                .foregroundColor(.white)
+                .shadow(color: .gray, radius: 2, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/)
+            ZStack{
+                Text("SKHUM")
+                    .font(.title)
+                    .fontWeight(.light)
+                    .foregroundColor(.green)
+                Button(action: {
+                    withAnimation(.spring()){
+                        menuOpen.toggle()
+                    }
+                }, label: {
+                    Image(systemName: "list.dash")
+                        .resizable()
+                        .frame(width: 20, height: 15)
+                })
+                .padding(.leading, UIScreen.main.bounds.width * 0.8)
+                .foregroundColor(.gray)
+            }
+            .padding(.top, 50)
+            .frame(width: UIScreen.main.bounds.width, alignment: .center)
         }
-        .background(Color.white)
+        .padding(.top, -55)
     }
 }
 
