@@ -11,17 +11,19 @@ struct ProgramView: View {
     @StateObject var viewModel = ProgramCardViewModel()
     
     var body: some View {
-        ScrollView{
-            ForEach(viewModel.getPrograms()){ card in
-//                ProgramCard(name: card.programName, mileage: card.givingMileage)
-                ProgramCard(name: card.name)
+        VStack(alignment: .leading){
+            Text("Programs")
+                .font(.title2)
+                .fontWeight(.light)
+                .padding(.top, 30)
+            ScrollView{
+                ForEach(viewModel.getPrograms()){ card in
+    //                ProgramCard(name: card.programName, mileage: card.givingMileage)
+                    ProgramCard(name: card.name)
+                }
             }
+            .frame(width: UIScreen.main.bounds.width * 0.9)
         }
-        .padding(20)
-        .frame(width: UIScreen.main.bounds.width * 0.9)
-        .background(Color(red: 0.776, green: 0.776, blue: 0.789))
-        .cornerRadius(20)
-        .padding(.top, 30)
     }
 }
 

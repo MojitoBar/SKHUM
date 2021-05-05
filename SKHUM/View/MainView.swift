@@ -14,21 +14,24 @@ struct MainView: View {
         ZStack{
             NavigationView{
                 VStack{
-                    NavbarView(menuOpen: $sideMenuBarToggle)
                     ScrollView(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/, showsIndicators: false, content: {
-                        // StateView
-                        StateView()
+//                        // StateView
+//                        sideview에서 보여주기로.
+//                        StateView()
+                        
                         // NoticeView
                         NoticeView()
                         // programView
                         ProgramView()
                     })
                     // 여백을 메꾸기 위함.
-                    .padding(.top, -8)
+                    .padding(.top, -6)
                 }
                 .navigationBarHidden(true)
+                .offset(x: 0, y: 70)
             }
-            
+            NavbarView(menuOpen: $sideMenuBarToggle)
+                .offset(x: 0, y: -330)
             SideMenuView(sideMenuBarToggle: $sideMenuBarToggle)
         }
         .ignoresSafeArea()
