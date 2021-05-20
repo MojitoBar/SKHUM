@@ -20,8 +20,10 @@ struct ProgramCard: View {
             VStack(alignment: .leading){
                 HStack{
                     Text(name)
-                        .font(.title)
+                        .font(.title2)
                         .fontWeight(.light)
+                        .frame(width: 240, height: 30, alignment: .leading)
+                        .lineLimit(1)
                     Spacer()
                     Text("25명")
                         .font(.title3)

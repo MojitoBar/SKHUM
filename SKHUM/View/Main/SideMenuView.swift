@@ -36,9 +36,14 @@ struct SideMenuView: View {
                 
                 HStack(spacing: 15){
                     VStack(alignment: .leading, content: {
-                        Text("Placeholder")
-                            .font(.title)
-                            .fontWeight(.semibold)
+                        HStack{
+                            Image(systemName: "person.circle")
+                                .resizable()
+                                .frame(width: 25, height: 25, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            Text("주동석")
+                                .font(.title2)
+                                .fontWeight(.semibold)
+                        }
                         
                         Text("wnehdtjr5@gmail.com")
                             .fontWeight(.semibold)
@@ -51,20 +56,25 @@ struct SideMenuView: View {
                 
                 // Menu Buttons ...
                 VStack (alignment: .leading){
-                    MenuButtonView(image: "gear", title: "asdfasdfa", selected: $selectedIndex, show: $sideMenuBarToggle)
-                    MenuButtonView(image: "gear", title: "asdfasdfa", selected: $selectedIndex, show: $sideMenuBarToggle)
-                    MenuButtonView(image: "gear", title: "asdfasdfa", selected: $selectedIndex, show: $sideMenuBarToggle)
-                    MenuButtonView(image: "gear", title: "asdfasdfa", selected: $selectedIndex, show: $sideMenuBarToggle)
-                    MenuButtonView(image: "gear", title: "asdfasdfa", selected: $selectedIndex, show: $sideMenuBarToggle)
+                    MenuButtonView(image: "bitcoinsign.circle", title: "마일리지 현황", selected: $selectedIndex, show: $sideMenuBarToggle)
+                    MenuButtonView(image: "book.closed", title: "신청한 프로그램", selected: $selectedIndex, show: $sideMenuBarToggle)
+                    MenuButtonView(image: "link.circle", title: "E - 커리어 센터", selected: $selectedIndex, show: $sideMenuBarToggle)
                 }
                 .padding(.top)
+                .padding(.leading, -50)
                 
                 Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
             }
             .frame(width: width - 100)
-            .background(Color.gray)
+            .background(Color.green)
             .offset(x: sideMenuBarToggle ? 0 : width - 100)
         }
         .background(Color.black.opacity(sideMenuBarToggle ? 0.3 : 0))
+    }
+}
+
+struct SideMenuView_Previews: PreviewProvider {
+    static var previews: some View {
+        MainView()
     }
 }

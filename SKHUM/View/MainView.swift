@@ -28,7 +28,7 @@ struct MainView: View {
                     .padding(.top, -6)
                 }
                 .navigationBarHidden(true)
-                .offset(x: 0, y: 70)
+                .padding(.top, 70)
             }
             NavbarView(menuOpen: $sideMenuBarToggle)
                 .offset(x: 0, y: -330)
