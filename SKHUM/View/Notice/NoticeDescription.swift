@@ -15,8 +15,24 @@ struct NoticeDescription: View {
             .navigationBarItems(leading:Button(action: {
                 self.mode.wrappedValue.dismiss()
             }, label: {
+                Button(action: {
+                    
+                }, label: {
+                    /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
+                })
                 Image(systemName: "arrow.left")
             }))
+    }
+}
+
+extension UINavigationController: UIGestureRecognizerDelegate {
+    override open func viewDidLoad() {
+        super.viewDidLoad()
+        interactivePopGestureRecognizer?.delegate = self
+    }
+
+    public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        return viewControllers.count > 1
     }
 }
 
