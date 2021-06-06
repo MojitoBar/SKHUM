@@ -8,14 +8,12 @@
 import SwiftUI
 
 struct NoticeView: View {
+    @State var noticeTitle: [String] = ["[교수학습] 2021학년도 1학기 〈뿌리튼튼〉 관련 서식",
+    "[사회진출]2021학년도 1학기 GoodWin 창업동아리 모집",
+    "[교수학습] 2021학년도 1학기 학습법 특강(워크숍) 안내",
+    "2021-1학기 취업역량강화특강 실시 안내",
+    "2021학년도 1학기 5월 진로 취업 미니 특강 신청안내"]
     var body: some View {
-        
-        let noticeTitle: [String] = ["[교수학습] 2021학년도 1학기 〈뿌리튼튼〉 관련 서식",
-        "[사회진출]2021학년도 1학기 GoodWin 창업동아리 모집",
-        "[교수학습] 2021학년도 1학기 학습법 특강(워크숍) 안내",
-        "2021-1학기 취업역량강화특강 실시 안내",
-        "2021학년도 1학기 5월 진로 취업 미니 특강 신청안내"]
-        
         VStack(alignment: .leading){
             Text("Notice")
                 .font(.title2)
@@ -35,7 +33,7 @@ struct NoticeView: View {
                 }
                 
                 NavigationLink(
-                    destination: NoticeDescription(),
+                    destination: NoticeDescription(nt: $noticeTitle),
                     label: {
                         Image(systemName: "plus")
                             .foregroundColor(.green)
